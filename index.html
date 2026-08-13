@@ -20,8 +20,8 @@ h2{font-size:13px;margin:18px 24px 8px;color:var(--mut);text-transform:uppercase
 .days{font-weight:700;color:var(--red)}
 .controls{display:flex;gap:10px;padding:6px 24px 12px;flex-wrap:wrap}
 select,input{background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:13px}input{min-width:220px}
-.wrap{padding:0 24px 40px}
-table{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.wrap{padding:0 24px 40px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;min-width:860px;border-collapse:collapse;font-size:12.5px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:middle}
 th{position:sticky;top:0;background:#f0f3f7;white-space:nowrap;color:var(--mut);font-weight:600}
 tr:last-child td{border-bottom:0}
@@ -38,6 +38,21 @@ td.nm{font-weight:600}
 .aging{font-weight:600}.a-ok{color:var(--mut)}.a-warn{color:var(--amber)}.a-bad{color:var(--red)}
 .legend{color:var(--mut);font-size:11px;padding:8px 24px 0}
 tr:hover td{background:#f7f9fc}
+@media(max-width:680px){
+ header{padding:14px 16px}h1{font-size:16px}
+ .tiles{padding:12px 16px;gap:8px;grid-template-columns:repeat(2,1fr)}
+ .tile .tv{font-size:22px}
+ h2{margin:14px 16px 6px}
+ .attn{margin:0 16px}
+ .attn .row{grid-template-columns:1fr;gap:3px;padding:10px 14px}
+ .attn .row .days{justify-self:start}
+ .controls{padding:6px 16px 10px;gap:8px}
+ input,select{width:100%;min-width:0}
+ .wrap{padding:0 16px 32px}
+ .legend{padding:8px 16px 0}
+ .hscroll-hint{display:block}
+}
+.hscroll-hint{display:none;color:var(--mut);font-size:11px;padding:6px 16px 0}
 </style></head><body>
 <header>
  <div><h1>🎯 Rising Stars — Табло запросов от работодателей</h1>
@@ -70,6 +85,7 @@ tr:hover td{background:#f7f9fc}
 </div>
 <div class="legend">Клик по столбцу — сортировка · Статус запроса + «дней без движения» позволяют Наташе проверять доску ежедневно и не терять заявки.</div>
 
+<div class="hscroll-hint">← таблицу можно прокручивать вбок →</div>
 <div class="wrap"><table><thead><tr>
 <th>Работодатель</th><th>Тип</th><th>Позиция</th><th>Страна</th><th>Статус запроса</th><th>Приоритет</th><th>Ответственный</th><th>Кандидатов подано</th><th>Дедлайн</th><th>Без движения</th><th>Источник</th>
 </tr></thead><tbody>
