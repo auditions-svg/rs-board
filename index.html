@@ -1,0 +1,89 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rising Stars — Табло запросов (концепт)</title>
+<style>
+:root{--bg:#f4f6f9;--card:#ffffff;--line:#e3e8ef;--tx:#1f2a37;--mut:#6b7a8d;--acc:#1f9d63;--red:#d64541;--amber:#c07d16;--hi:#2f6fed;--pur:#6b5cd6}
+*{box-sizing:border-box}body{margin:0;font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--tx)}
+header{padding:18px 24px;border-bottom:1px solid var(--line);background:var(--card);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+h1{font-size:19px;margin:0}.sub{color:var(--mut);font-size:12px}
+.badge-demo{background:#fbf1dc;color:var(--amber);border:1px solid #eBd9b0;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;padding:16px 24px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.tile .tv{font-size:26px;font-weight:700}.tile .tl{color:var(--mut);font-size:12px;margin-top:2px}
+.tile.bad{border-color:#f3c9c7}.tile.bad .tv{color:var(--red)}
+.tile.warn{border-color:#eddcb6}.tile.warn .tv{color:var(--amber)}
+.tile.ok{border-color:#bfe6cf}.tile.ok .tv{color:var(--acc)}
+.tile.hi .tv{color:var(--hi)}
+h2{font-size:13px;margin:18px 24px 8px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+.attn{margin:0 24px;background:#fff7f6;border:1px solid #f3c9c7;border-radius:12px;overflow:hidden}
+.attn .row{display:grid;grid-template-columns:1.6fr 1fr .8fr 1fr auto;gap:10px;padding:11px 16px;border-bottom:1px solid #f1dcda;align-items:center}
+.attn .row:last-child{border-bottom:0}.attn .who{font-weight:600}
+.days{font-weight:700;color:var(--red)}
+.controls{display:flex;gap:10px;padding:6px 24px 12px;flex-wrap:wrap}
+select,input{background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:13px}input{min-width:220px}
+.wrap{padding:0 24px 40px}
+table{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:middle}
+th{position:sticky;top:0;background:#f0f3f7;white-space:nowrap;color:var(--mut);font-weight:600}
+tr:last-child td{border-bottom:0}
+td.nm{font-weight:600}
+.b{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap}
+.s-new{background:#eeeafc;color:#5a49c0}
+.s-work{background:#e4eefd;color:#2158c9}
+.s-pres{background:#e2f4ea;color:#158049}
+.s-wait{background:#fbf1dc;color:#a9700f}
+.s-stall{background:#fbe3e2;color:#c0322e}
+.s-won{background:#d6f0e1;color:#0f7a45}
+.p-high{background:#e4eefd;color:#2158c9}.p-med{background:#fbf1dc;color:#a9700f}.p-low{background:#eef1f5;color:var(--mut)}
+.src{color:var(--mut);font-size:11px}
+.aging{font-weight:600}.a-ok{color:var(--mut)}.a-warn{color:var(--amber)}.a-bad{color:var(--red)}
+.legend{color:var(--mut);font-size:11px;padding:8px 24px 0}
+tr:hover td{background:#f7f9fc}
+</style></head><body>
+<header>
+ <div><h1>🎯 Rising Stars — Табло запросов от работодателей</h1>
+ <div class="sub">Единое место всех запросов отелей/круизов/парков · статус запроса · ответственный · «сколько дней без движения»</div></div>
+ <div style="text-align:right"><span class="badge-demo">КОНЦЕПТ · демо-данные</span><div class="sub" style="margin-top:6px">Автообновление: раз в 2–3 ч · Обновлено: 13.08.2026 17:40</div></div>
+</header>
+
+<div class="tiles">
+ <div class="tile"><div class="tv">24</div><div class="tl">Активных запросов</div></div>
+ <div class="tile hi"><div class="tv">7</div><div class="tl">Ждём ответ отеля</div></div>
+ <div class="tile bad"><div class="tv">3</div><div class="tl">⚠️ Зависли / просрочка</div></div>
+ <div class="tile warn"><div class="tv">5</div><div class="tl">Без движения ≥5 дн.</div></div>
+ <div class="tile ok"><div class="tv">4</div><div class="tl">Контракт закрыт (мес.)</div></div>
+ <div class="tile"><div class="tv">$182k</div><div class="tl">Потенц. выручка в работе</div></div>
+</div>
+
+<h2>⚠️ Требуют внимания сегодня</h2>
+<div class="attn">
+ <div class="row"><div class="who">Waldorf Astoria Maldives — Magician (Sabi)</div><div>Отель ждёт доп. инфо</div><div><span class="b s-stall">Зависло</span></div><div>Ответств.: Яна</div><div class="days">10 дней без ответа</div></div>
+ <div class="row"><div class="who">Conrad Maldives — DJ + Duo</div><div>Дедлайн подачи истёк</div><div><span class="b s-wait">Ждём отель</span></div><div>Ответств.: Настя</div><div class="days">дедлайн −2 дня</div></div>
+ <div class="row"><div class="who">Kempinski Djibouti — 5 танцоров</div><div>Нет ответа кандидатов</div><div><span class="b s-work">В работе</span></div><div>Ответств.: Юлия</div><div class="days">7 дней тишины</div></div>
+</div>
+
+<div class="controls">
+ <input placeholder="Поиск: работодатель, позиция, страна…">
+ <select><option>Все типы</option><option>Cruise Ship</option><option>Hotel</option><option>Park</option><option>Festival</option></select>
+ <select><option>Все статусы</option><option>Новый запрос</option><option>В работе</option><option>Презентовано</option><option>Ждём отель</option><option>Зависло</option></select>
+ <select><option>Все менеджеры</option><option>Настя Ревчук</option><option>Яна</option><option>Юлия</option><option>Ирина Порада</option></select>
+ <select><option>Все источники</option><option>Почта</option><option>Таблица</option><option>Переписка WhatsApp</option></select>
+</div>
+<div class="legend">Клик по столбцу — сортировка · Статус запроса + «дней без движения» позволяют Наташе проверять доску ежедневно и не терять заявки.</div>
+
+<div class="wrap"><table><thead><tr>
+<th>Работодатель</th><th>Тип</th><th>Позиция</th><th>Страна</th><th>Статус запроса</th><th>Приоритет</th><th>Ответственный</th><th>Кандидатов подано</th><th>Дедлайн</th><th>Без движения</th><th>Источник</th>
+</tr></thead><tbody>
+<tr><td class="nm">Waldorf Astoria Maldives</td><td>Hotel</td><td>Magician</td><td>🇲🇻 Maldives</td><td><span class="b s-stall">Зависло</span></td><td><span class="b p-high">High</span></td><td>Яна</td><td>6</td><td>—</td><td class="aging a-bad">10 дн.</td><td class="src">Почта (seo)</td></tr>
+<tr><td class="nm">Conrad Maldives</td><td>Hotel</td><td>Female DJ + Duo</td><td>🇲🇻 Maldives</td><td><span class="b s-wait">Ждём отель</span></td><td><span class="b p-high">High</span></td><td>Настя</td><td>4</td><td class="a-bad">11.08 (−2)</td><td class="aging a-warn">4 дн.</td><td class="src">Почта</td></tr>
+<tr><td class="nm">Royal Caribbean</td><td>Cruise Ship</td><td>Ballroom Couple</td><td>🌐 Intl</td><td><span class="b s-pres">Презентовано</span></td><td><span class="b p-high">High</span></td><td>Ирина Порада</td><td>9</td><td>20.08</td><td class="aging a-ok">1 дн.</td><td class="src">Переписка</td></tr>
+<tr><td class="nm">NagaWorld (казино)</td><td>Cruise Ship</td><td>Show Duo</td><td>🇰🇭 Cambodia</td><td><span class="b s-work">В работе</span></td><td><span class="b p-med">Medium</span></td><td>Настя</td><td>3</td><td>28.08</td><td class="aging a-ok">2 дн.</td><td class="src">Таблица BD</td></tr>
+<tr><td class="nm">Heritance Aarah</td><td>Hotel</td><td>Fire / Dancers / DJ</td><td>🇲🇻 Maldives</td><td><span class="b s-new">Новый запрос</span></td><td><span class="b p-high">High</span></td><td>—</td><td>0</td><td>—</td><td class="aging a-warn">6 дн.</td><td class="src">Почта</td></tr>
+<tr><td class="nm">MSC Seashore (ShowUp)</td><td>Cruise Ship</td><td>Salsa Couple</td><td>🌐 Intl</td><td><span class="b s-pres">Презентовано</span></td><td><span class="b p-med">Medium</span></td><td>Юлия</td><td>12</td><td>18.08</td><td class="aging a-ok">1 дн.</td><td class="src">Проект CRM</td></tr>
+<tr><td class="nm">Kempinski Djibouti</td><td>Hotel</td><td>5 Dancers</td><td>🇩🇯 Djibouti</td><td><span class="b s-work">В работе</span></td><td><span class="b p-med">Medium</span></td><td>Юлия</td><td>2</td><td>25.08</td><td class="aging a-bad">7 дн.</td><td class="src">Переписка</td></tr>
+<tr><td class="nm">Hossoland Park</td><td>Park</td><td>Animators + Musicians</td><td>🇵🇱 Poland</td><td><span class="b s-new">Новый запрос</span></td><td><span class="b p-med">Medium</span></td><td>—</td><td>0</td><td>—</td><td class="aging a-ok">2 дн.</td><td class="src">Почта</td></tr>
+<tr><td class="nm">TUI Mein Schiff 5</td><td>Cruise Ship</td><td>4pc Band</td><td>🌐 Intl</td><td><span class="b s-won">Контракт</span></td><td><span class="b p-low">Low</span></td><td>Инна MD</td><td>7</td><td>закрыто</td><td class="aging a-ok">—</td><td class="src">Проект CRM</td></tr>
+<tr><td class="nm">33 Music Group</td><td>Hotel</td><td>Dancers (Vietnam)</td><td>🇻🇳 Vietnam</td><td><span class="b s-work">В работе</span></td><td><span class="b p-med">Medium</span></td><td>Настя</td><td>5</td><td>30.08</td><td class="aging a-ok">3 дн.</td><td class="src">Почта (ceo)</td></tr>
+<tr><td class="nm">M-1 Entertainment</td><td>Hotel</td><td>Jazz Singer (Manila)</td><td>🇵🇭 Philippines</td><td><span class="b s-pres">Презентовано</span></td><td><span class="b p-low">Low</span></td><td>Ирина Порада</td><td>3</td><td>15.09</td><td class="aging a-ok">4 дн.</td><td class="src">Почта</td></tr>
+<tr><td class="nm">Galaxy / StarWorld Macau</td><td>Cruise Ship</td><td>Variety Acts</td><td>🇲🇴 Macau</td><td><span class="b s-new">Новый запрос</span></td><td><span class="b p-med">Medium</span></td><td>—</td><td>0</td><td>—</td><td class="aging a-ok">1 дн.</td><td class="src">Переписка</td></tr>
+</tbody></table></div>
+</body></html>
