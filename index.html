@@ -74,6 +74,7 @@ td .b{max-width:none}
 <div class="tabs">
  <div class="tab active" data-view="view-requests">🎯 Запросы работодателей</div>
  <div class="tab" data-view="view-bd">💃 Бальники (BD) · 9–10</div>
+ <div class="tab" data-view="view-kpi">📊 KPI менеджеров</div>
 </div>
 
 <section id="view-requests">
@@ -512,8 +513,36 @@ td .b{max-width:none}
 </tbody></table></div>
 </section>
 
+<section id="view-kpi" hidden>
+<div class="tiles">
+ <div class="tile"><div class="tv">9</div><div class="tl">Презентаций вчера (16.08)</div></div>
+ <div class="tile hi"><div class="tv">550</div><div class="tl">Презентаций за 08.2026</div></div>
+ <div class="tile"><div class="tv">30</div><div class="tl">Предложено контрактов (мес.)</div></div>
+ <div class="tile ok"><div class="tv">$33,938</div><div class="tl">Сумма предложенных (мес.)</div></div>
+ <div class="tile"><div class="tv">9</div><div class="tl">Улетели / приступили (мес.)</div></div>
+ <div class="tile warn"><div class="tv">0</div><div class="tl">Заключено контрактов (мес.)</div></div>
+</div>
+<div class="legend">KPI менеджеров кастинга · источники: CRM Презентации (менеджер, дата), CRM Угоди (Star Maker: предложено = сделки, начатые в месяце; сумма = «Вся сумма»; улетели = дата вылета в месяце) · часы из табеля будут подключены после сверки актуального файла · планы на месяц не заданы — покажем План/Факт/Оценку, когда утвердят константы · обновлено 17.08.2026 12:43 UTC · подсветка розовым = 0 презентаций за месяц.</div>
+<div class="hscroll-hint">← таблицу можно прокручивать вбок →</div>
+<div class="wrap"><table id="kpi-table"><thead>
+<tr><th rowspan="2">Менеджер</th><th rowspan="2">Департ.</th><th rowspan="2">Часы<br>(мес.)</th><th colspan="2">Презентовано заказчикам</th><th colspan="2">Презентовано артистов</th><th colspan="2">Предложено контрактов (мес.)</th><th rowspan="2">Улетели<br>(мес.)</th><th rowspan="2">Контрактов<br>(мес.)</th></tr>
+<tr><th>Вчера</th><th>Мес.</th><th>Вчера</th><th>Мес.</th><th>Кол-во</th><th>Сумма $</th></tr>
+</thead><tbody>
+<tr><td class="nm">Daria Shytikova</td><td class="src">DD, MD</td><td style="text-align:center">—</td><td style="text-align:center">0</td><td style="text-align:center">193</td><td style="text-align:center">0</td><td style="text-align:center">52</td><td style="text-align:center">0</td><td style="text-align:center">$0</td><td style="text-align:center">0</td><td style="text-align:center">0</td></tr>
+<tr><td class="nm">Настя Ревчук</td><td class="src">CD, DD, Guest/Show Acts, MD, S</td><td style="text-align:center">—</td><td style="text-align:center">0</td><td style="text-align:center">84</td><td style="text-align:center">0</td><td style="text-align:center">24</td><td style="text-align:center">5</td><td style="text-align:center">$4,468</td><td style="text-align:center">1</td><td style="text-align:center">0</td></tr>
+<tr><td class="nm">Елена MD</td><td class="src">Contact Us, MD</td><td style="text-align:center">—</td><td style="text-align:center">0</td><td style="text-align:center">62</td><td style="text-align:center">0</td><td style="text-align:center">46</td><td style="text-align:center">7</td><td style="text-align:center">$12,202</td><td style="text-align:center">1</td><td style="text-align:center">0</td></tr>
+<tr><td class="nm">Яна Игумнова</td><td class="src">Animators, D Groups, DD, LOL</td><td style="text-align:center">—</td><td style="text-align:center">0</td><td style="text-align:center">58</td><td style="text-align:center">0</td><td style="text-align:center">34</td><td style="text-align:center">6</td><td style="text-align:center">$6,878</td><td style="text-align:center">0</td><td style="text-align:center">0</td></tr>
+<tr><td class="nm">Таня CD</td><td class="src">Animators, CD, Extreme, Guest/</td><td style="text-align:center">—</td><td style="text-align:center">0</td><td style="text-align:center">50</td><td style="text-align:center">0</td><td style="text-align:center">45</td><td style="text-align:center">0</td><td style="text-align:center">$0</td><td style="text-align:center">3</td><td style="text-align:center">0</td></tr>
+<tr><td class="nm">Ника</td><td class="src">Animators, MD</td><td style="text-align:center">—</td><td style="text-align:center">9</td><td style="text-align:center">48</td><td style="text-align:center">9</td><td style="text-align:center">47</td><td style="text-align:center">6</td><td style="text-align:center">$6,000</td><td style="text-align:center">0</td><td style="text-align:center">0</td></tr>
+<tr><td class="nm">Инна MD</td><td class="src">MD</td><td style="text-align:center">—</td><td style="text-align:center">0</td><td style="text-align:center">40</td><td style="text-align:center">0</td><td style="text-align:center">15</td><td style="text-align:center">1</td><td style="text-align:center">$0</td><td style="text-align:center">3</td><td style="text-align:center">0</td></tr>
+<tr><td class="nm">Александра Соколова</td><td class="src">BD, DD</td><td style="text-align:center">—</td><td style="text-align:center">0</td><td style="text-align:center">7</td><td style="text-align:center">0</td><td style="text-align:center">7</td><td style="text-align:center">0</td><td style="text-align:center">$0</td><td style="text-align:center">0</td><td style="text-align:center">0</td></tr>
+<tr><td class="nm">Юлія Колинюк</td><td class="src">BD, D Groups, Guest/Show Acts</td><td style="text-align:center">—</td><td style="text-align:center">0</td><td style="text-align:center">5</td><td style="text-align:center">0</td><td style="text-align:center">5</td><td style="text-align:center">0</td><td style="text-align:center">$0</td><td style="text-align:center">0</td><td style="text-align:center">0</td></tr>
+<tr><td class="nm">Ярослав</td><td class="src">—</td><td style="text-align:center">—</td><td style="text-align:center">0</td><td style="text-align:center">3</td><td style="text-align:center">0</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">$4,390</td><td style="text-align:center">1</td><td style="text-align:center">0</td></tr>
+</tbody></table></div>
+</section>
+
 <script>
-document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click',function(){document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active')});t.classList.add('active');document.getElementById('view-requests').hidden=(t.dataset.view!=='view-requests');document.getElementById('view-bd').hidden=(t.dataset.view!=='view-bd');});});
+document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click',function(){document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active')});t.classList.add('active');['view-requests','view-bd','view-kpi'].forEach(function(id){var el=document.getElementById(id);if(el)el.hidden=(t.dataset.view!==id);});});});
 (function(){var tb=document.querySelector('#bd-table tbody');var rows=[].slice.call(tb.querySelectorAll('tr'));
 var q=document.getElementById('bd-q'),fr=document.getElementById('bd-rating'),ft=document.getElementById('bd-type'),fs=document.getElementById('bd-src'),fm=document.getElementById('bd-mw'),fp=document.getElementById('bd-pres'),fc=document.getElementById('bd-country');
 function apply(){var s=(q.value||'').toLowerCase();rows.forEach(function(r){var ok=true;
